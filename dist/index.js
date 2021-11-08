@@ -18,17 +18,14 @@ const express_1 = __importDefault(require("express"));
 const app = (0, express_1.default)();
 require("dotenv/config");
 app.use(express_1.default.json());
-/* app.use(express.urlencoded({ extended: false }));
-
-
-app.use(function(request, response, next) {
+app.use(express_1.default.urlencoded({ extended: false }));
+app.use(function (request, response, next) {
     console.log(request.method, request.url);
     next();
-    });
-
-app.get('/', (request: Request, response: Response) => {
-return response.send('OK');
-}); */
+});
+app.get('/', (request, response) => {
+    return response.send('OK');
+});
 const port = process.env.PORT || 3333;
 app.listen(3000, () => console.log(`Servidor iniciado... ${port}`));
 /* app.use(function(req: Request, res:Response, next) {
@@ -131,7 +128,8 @@ app.post('/users', (req, res) => {
             res.send(`Adicionado`);
         }
     }
-    res.status(400).send(`erro`);
+    /* res.status(400).send(`erro`)
+ */
 });
 app.put('/users/:id', (req, res) => {
     const name = String(req.body.name);
