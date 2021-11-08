@@ -24,7 +24,7 @@ app.use(function (request, response, next) {
     next();
 });
 app.get('/', (request, response) => {
-    return response.send('OK');
+    return response.send('OKi');
 });
 const port = process.env.PORT || 3333;
 app.listen(3000, () => console.log(`Servidor iniciado... ${port}`));
