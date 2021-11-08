@@ -1,6 +1,9 @@
 import express, {Request, Response} from 'express';
 import { stringify } from 'querystring';
 const app = express();
+import 'dotenv/config'
+
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
@@ -14,7 +17,9 @@ app.get('/', (request: Request, response: Response) => {
 return response.send('OK');
 });
 
-app.listen(3000, () => console.log("Servidor iniciado..."));
+const port = process.env.PORT || 3333
+
+app.listen(3000, () => console.log(`Servidor iniciado... ${port}`));
 
 
 /* app.use(function(req: Request, res:Response, next) {
