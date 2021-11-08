@@ -5,7 +5,7 @@ import 'dotenv/config'
 
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+/* app.use(express.urlencoded({ extended: false }));
 
 
 app.use(function(request, response, next) {
@@ -15,7 +15,7 @@ app.use(function(request, response, next) {
 
 app.get('/', (request: Request, response: Response) => {
 return response.send('OK');
-});
+}); */
 
 const port = process.env.PORT || 3333
 
