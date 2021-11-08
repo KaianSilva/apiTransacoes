@@ -89,7 +89,9 @@ class User {
     }
 }
 const users = [];
-let id = 0;
+const user2 = new User(1, "kaian", 29, "3890218302");
+users.push(user2);
+let id = 1;
 const transactions = [];
 let idTrans = 0;
 app.get('/users/:id', (req, res) => {

@@ -101,7 +101,10 @@ class User {
 
 const users:User[] = []
 
-let id: number = 0
+const user2: User = new User(1,"kaian",29,"3890218302")
+users.push(user2)
+
+let id: number = 1
 
 const transactions: Transaction[] = []
 let idTrans: number = 0
