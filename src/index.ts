@@ -19,7 +19,7 @@ return response.send('OK');
 
 const port = process.env.PORT || 3333
 
-app.listen(3000, () => console.log(`Servidor iniciado... ${port}`));
+app.listen(port, () => console.log(`Servidor iniciado... ${port}`));
 
 
 /* app.use(function(req: Request, res:Response, next) {
